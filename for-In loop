@@ -1,0 +1,4 @@
+print("Why is 6 afraid of 7? Because …")                            
+for num in 7...9 {
+  print(num)
+}
