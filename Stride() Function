@@ -1,0 +1,17 @@
+//for-in loops also give us the flexibility to choose how we want to iterate over a sequence with the stride() function -- stride(from: a, to: b, by: c)
+for num in stride(from: 0, to: 6, by: 2) {
+  print(num)
+} 
+// prints 0 2 4
+// The first argument, from: 0 is the starting number of the sequence (0).
+// The second argument, to: 6 is the end of the sequence (6). But notice, we didn’t print out 6 which means this end number is not included.
+// The third argument, by: 2 determines how much to increment (or decrement if we use a negative number) during each iteration. Here’s how the value of num changes in the loop
+
+print("We're starting in...")
+
+// Edit the range 1...3 in the loop to use stride() 🏁
+for num in stride (from:3, to:0, by:-1) {
+  print(num)
+}
+
+print("GO!")
