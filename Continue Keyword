@@ -1,0 +1,49 @@
+// When iterating through a sequence, we might not need to use every single value.
+// If we wanted to only print out all the characters except for vowels ("a", "e", "i", "o", "u") in a String:
+
+let challenge = "bring it"
+
+for char in challenge {
+  switch char {
+    case "a", "e", "i", "o", "u":
+      continue
+    default:
+      print(char)
+  }
+}
+// We have a switch statement which checks char and if it is any of the following characters: "a", "e", "i", "o", and "u". Inside our case statement, if the character matches, we skip over it with continue. If our character is not a vowel, then we print it out.
+
+// Output
+b
+r
+n
+g
+
+t
+
+//Example
+// Currently, in our for-in loop we print out every single number in the range, 1...9. However, we don’t want to print out the odd numbers.
+// Inside the for-in loop, add the code needed to skip over the odd numbers by adding:
+// An if statement that checks if num is an odd number.
+// Inside the body of the if statement, the continue keyword.
+
+for num in 1...9 {
+  // Add your code below 🔢 
+  if num % 2 == 1 {
+    continue
+  }
+  
+  
+  print(num)
+}
+
+print("Who do we appreciate?")
+print("YOU!")
+
+//Output
+2
+4
+6
+8
+Who do we appreciate?
+YOU!
