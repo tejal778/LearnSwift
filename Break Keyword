@@ -1,0 +1,44 @@
+// We can use the break keyword to exit out of the loop before the loop fully completes:
+
+let respect = 556
+
+for pageNum in 1...1000 {
+  if pageNum == respect {
+    print("Respect means: to admire someone for their abilities.")
+    break
+  }
+  print("On page \(pageNum) and still no 'respect'!")
+}
+
+//Output
+On page 1 and still no 'respect'!
+On page 2 and still no 'respect'!
+...
+On page 555 and still no 'respect'!
+Respect means: to admire someone for their abilities.
+
+//Example
+// To complete the program, in the for-in loop:
+// Add an if statement that checks if counter is equal to guessedNum.
+// Inside the if body, print out the "It's [guessedNum]!!" and replace [guessedNum] with the actual value of guessedNum.
+// After the print() statement, add a break keyword.
+// After you pass this step, run the program a few times to get a sense of when break is exiting the loop.
+
+var guessedNum = Int.random(in: 1...15)
+
+for counter in 1...15 {
+  // Add your code below 🤔
+  if counter == guessedNum {
+    print ("It's \(guessedNum)!!")
+    break
+  }
+  
+  print("Is it \(counter)?")
+}
+
+//Output (Break point will keep changing every time 
+Is it 1?
+Is it 2?
+Is it 3?
+Is it 4?
+It's 5!!
