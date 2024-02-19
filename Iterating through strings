@@ -1,0 +1,82 @@
+// Let’s say we wanted to look over a string and see if it contains "z". In a program, that means we would loop through the characters of a String. In each iteration would we check if the character was a "z".
+
+var quote = "our whole life is solving puzzles."
+
+for character in quote {
+  print(character)
+  if character == "z" {
+    print("There's a z!")
+  }
+}
+
+//Output
+o
+u
+r
+ 
+w
+h
+o
+l
+e
+ 
+l
+i
+f
+e
+ 
+i
+s
+ 
+s
+o
+l
+v
+i
+n
+g
+ 
+p
+u
+z
+There's a z!
+z
+There's a z!
+l
+e
+s
+.
+
+
+//Example
+var funFact = "exlxephxxxaxnts xcaxxn'xxt xxxjxumxpx."
+
+// Add your code below
+for char in funFact {
+  if char != "x" {
+    print(char)
+  }
+}
+
+// Prints output
+e
+l
+e
+p
+h
+a
+n
+t
+s
+ 
+c
+a
+n
+'
+t
+ 
+j
+u
+m
+p
+.
