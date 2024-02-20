@@ -4,3 +4,53 @@ _ usage when we don’t need to use the placeholder variable.
 continue allows us to move on to the next value.
 break stops the loop before the stopping condition is met.
 while loops are used when we don’t know how many times we’re looping.
+
+// Challenge 1 - Create a loop that iterates from 1 to 100 that prints out whether the current number in the iteration is even or odd.
+// Code
+for num in 1...100 {
+  if num % 2 == 0 {
+    print ("Number is even")
+  } else if num % 2 == 1 {
+    print ("Number is odd")
+  }
+}
+
+// Challenge 2 - Loop through a string and count how many characters are in it.
+// Code
+let myString = "Hello, World!"
+let characterCount = myString.count
+print("The number of characters in the string is: \(characterCount)")
+
+// In Swift, the count property of a String instance returns the number of characters in that string.
+
+//Challenge 3 - Recreate the follow pattern using loops:
+*
+**
+***
+****
+
+//Code
+
+// Define the number of rows for the pattern
+let numberOfRows = 4
+
+// Outer loop for rows
+for row in 1...numberOfRows {
+    // Inner loop for printing asterisks
+    for _ in 1...row {
+        print("*", terminator: "")
+    }
+    // Move to the next line after each row
+    print()
+}
+
+// By default, print() appends a newline character (\n) at the end of each printed item, which means that each call to print() starts on a new line.
+
+
+
+
+
+
+
+
+
