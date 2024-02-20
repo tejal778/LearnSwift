@@ -42,3 +42,11 @@ Is it 2?
 Is it 3?
 Is it 4?
 It's 5!!
+
+
+// Note - .lowercased() is a method that can be called on strings to convert the string to a lowercase string. For instance:
+
+let yell = "AHHH"
+let whisper = yell.lowercased()
+
+print(whisper)  // Prints: ahhh
