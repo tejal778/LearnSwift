@@ -1,0 +1,6 @@
+for-in loops are used to iterate over collection items like ranges and strings.
+stride() creates a range that we can customize.
+_ usage when we don’t need to use the placeholder variable.
+continue allows us to move on to the next value.
+break stops the loop before the stopping condition is met.
+while loops are used when we don’t know how many times we’re looping.
