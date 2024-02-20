@@ -1,0 +1,47 @@
+// This loop allows us to continue iterating for as long as a condition remains true.
+// Useful when we are not sure for how long we need to run the loop for
+// Example - let’s say we have a simple dice game that keeps a total of the numbers we’ve rolled. The goal of this game is to keep rolling until our total is at least 50. We know we’ll reach 50 eventually but we don’t know how many rolls we need to reach our stop condition
+
+// Code
+var total = 0
+
+while total < 50 {
+  let diceRoll = Int.random(in: 1...6)
+  total += diceRoll
+}
+
+// The while keyword starts our loop and accepts a condition: total < 50.
+// Just like the for-in loop, after the condition is the body enclosed by a set of curly braces { }. The body’s code is executed during each iteration of the loop.
+// In the body, we declare let diceRoll with a value of Int.random(in: 1...6). In each iteration of the loop, we’re declaring a new diceRoll that has a random number from 1 to 6.
+// In addition to reassigning diceRoll, we’re also adding diceRoll to total. Eventually, total will be at least 50 and the loop terminates (ends).
+// It’s important to note that we’re increasing total because it’s related to our stopping condition. If we forgot to, our while would continue to run without any instructions to stop. This non-terminating loop is known as an infinite loop. It’ll continue to run and take up our computer’s resources until we manually force it to close. Therefore, remember to add a way for your loop to end.
+
+// Example
+// In Guessing.swift, we have both a guess and a magicNum variable, each storing a random variable. We want to create a while loop that continues looping for as long as the values of both variables are different.
+// Under the variable definitions (but before the last print() statement):
+// Create a while loop.
+// Give the loop the condition guess != magicNum.
+// Reassign guess to Int.random(in: 1...10).
+// Also reassign magicNum to Int.random(in: 1...10).
+
+// To find out what the values of guess and magicNum are during our loop, add a print() statement inside the loop that uses string interpolation to print out:
+// You guessed [guess], and the number was [magicNum].
+
+//Code
+var guess = Int.random(in: 1...10)
+var magicNum = Int.random(in: 1...10)
+
+// Add your code here ✨
+while guess != magicNum {
+  guess = Int.random(in: 1...10)
+  magicNum = Int.random(in: 1...10)
+  print ("You guessed \(guess), and the number was \(magicNum).")
+}
+
+print("You're right it was \(guess)!")
+
+//Output
+You guessed 9, and the number was 1.
+You guessed 6, and the number was 5.
+You guessed 8, and the number was 8.
+You're right it was 8!
