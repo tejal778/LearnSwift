@@ -1,0 +1,59 @@
+Our goal is to take human phrases like "turpentine and turtles" and translate it to its “whale talk” equivalent: "UUEEIEEAUUEE".
+There are a few simple rules for translating English text to “whale language”:
+There are no consonants. Only vowels: "a", "e", "i", "o", "u".
+The "u"s and "e"s are extra long, so we must double them in our program.
+Once we have converted text to the whale language, the result is sung slowly, as is a custom in the ocean.
+Write a WhaleTalk.swift program that uses loops to accomplish this translation.
+
+//Code
+var input = "Lets go drink beer at mussorie in the night"
+var output = ""
+for char in input {
+  let lowerChar = char.lowercased()
+
+switch lowerChar {
+  case "a", "i", "o":
+  output = output + lowerChar.uppercased()
+  case "e":
+  output += "ee"
+  case "u":
+  output += "UU"
+  default:
+  break
+}
+}
+
+print (output)
+
+//Output
+eeOIeeeeAUUOIeeIeeI
+
+//Additional 
+Add an additional case to the switch statement.
+Allow certain consonants to be included in output.
+Combine the "e" and "u" cases into a single compound case.
+
+//Code
+var input = "Lets go drink beer at mussorie in the night"
+var output = ""
+for char in input {
+  let lowerChar = char.lowercased()
+
+switch lowerChar {
+  case "a", "i", "o":
+  output = output + lowerChar.uppercased()
+  case "e":
+  output += "ee"
+  case "u":
+  output += "UU"
+  case "b", "c", "r":
+  output += "eeUU"
+  default:
+  break
+}
+}
+
+print (output)
+
+//Output
+eeOeeUUIeeUUeeeeeeUUAUUOeeUUIeeIeeI
