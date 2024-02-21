@@ -1,0 +1,38 @@
+If you have ever been stuck in a car during a long drive, you might have sung some fun, repetitive songs to help pass the time. One of those songs may have been the “99 Bottles of Milk” song.
+The first verse of this song goes like this:
+“99 bottles of milk on the wall, 99 bottles of milk!
+You take one down and pass it around…
+98 bottles of milk on the wall!”
+The following verse repeats the lyrics above, except this time it would start with 98 bottles and end with 97 bottles; then, the lyrics would continue to repeat over and over again until we are left with 0 bottles of milk. When you think about it, that’s a lot of repetition!
+Write a program in Bottles.swift that uses a while loop to print the “99 Bottles of Milk” song in its entirety.
+
+//Code
+
+var numBottles: Int = 99
+while numBottles > 0 {
+
+print ("\(numBottles) bottles of milk on the wall, \(numBottles) bottles of milk!")
+print ("You take one down and pass it around...")
+
+numBottles = numBottles - 1
+
+print ("\(numBottles) bottles of milk on the wall!")
+
+}
+
+print ("0 bottles of milk on the wall, 0 bottles of milk!Go to the store and buy some more,99 bottles of milk on the wall!")
+
+//Output
+99 bottles of milk on the wall, 99 bottles of milk!
+You take one down and pass it around...
+98 bottles of milk on the wall!
+98 bottles of milk on the wall, 98 bottles of milk!
+.
+.
+.
+.
+1 bottles of milk on the wall!
+1 bottles of milk on the wall, 1 bottles of milk!
+You take one down and pass it around...
+0 bottles of milk on the wall!
+0 bottles of milk on the wall, 0 bottles of milk!Go to the store and buy some more,99 bottles of milk on the wall!
