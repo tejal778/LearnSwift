@@ -1,0 +1,35 @@
+//Example
+var name = [list of values]
+
+var location = [40.7245, -73.9979]
+//OR
+var location: [Double] = [40.7245, -73.9979]
+
+// Suppose the Tokyo Subway costs are as follows:
+
+Ticket	Adult	Child
+24-hour	¥800	¥400
+48-hour	¥1200	¥600
+72-hour	¥1500	¥750
+
+Create an array named subwayAdult and initialize it with 800, 1200, and 1500.
+
+Print it out using print().
+
+
+Stuck? Get a hint
+Checkpoint 2 Passed
+2.
+Initialize subwayChild with 400, 600, and 750. This time, be explicit with the type.
+
+Then print it out.
+
+//Code
+var subwayAdult = [800, 1200, 1500]
+print (subwayAdult)
+var subwayChild: [Int] = [400, 600, 750]
+print (subwayChild)
+
+//Output
+[800, 1200, 1500]
+[400, 600, 750]
