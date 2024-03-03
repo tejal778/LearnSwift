@@ -1,0 +1,12 @@
+//create an empty array called scores of the type Int:
+var scores = [Int]()
+
+//Example
+var subwayAdult = [Int]()
+print (subwayAdult)
+var subwayChild = [Int]()
+print (subwayChild)
+//Output
+[]
+[]
+
