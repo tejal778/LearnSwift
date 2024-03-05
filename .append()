@@ -1,0 +1,32 @@
+We can add a new item to the end of an array by calling the array’s .append() method:
+
+name.append(value)
+
+For example, suppose we have an array called gymBadges:
+
+var gymBadges = ["Boulder", "Cascade"]
+
+We can add a new item, "Thunder", to the end of the array by:
+
+gymBadges.append("Thunder") 
+
+// ["Boulder", "Cascade", "Thunder"]
+
+Alternatively, append an array of one or more items with the addition assignment operator +=:
+
+gymBadges += ["Thunder", "Rainbow"]
+
+// ["Boulder", "Cascade", "Thunder", "Rainbow"]
+
+
+
+var resolutions = ["play more music 🎸",
+                   "read more books 📚",
+                   "drink more water 💧"]
+
+// Write your code below 💪
+
+resolutions.append("Get fit")
+resolutions += ["Lose weight"]
+
+print(resolutions)                                 // ["play more music 🎸", "read more books 📚", "drink more water 💧", "Get fit", "Lose weight"]
