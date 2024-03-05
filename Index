@@ -1,0 +1,24 @@
+// When we have an array and we want to retrieve an individual value
+//Index - Item's position within an ordered list
+//Arrays in Swift are zero-indexed, meaning the first item has index 0, the second index 1, and so on.
+
+//Example
+var vowels = ["a", "e", "i", "o", "u"]
+The item at index 0 is "a".
+The item at index 1 is "e".
+The item at index 2 is "i".
+The item at index 3 is "o".
+The item at index 4 is "u".
+
+//Use subscript syntax to retrieve individual elements
+print(vowels[0])     // Prints: a
+print(vowels[1])     // Prints: e
+print(vowels[2])     // Prints: i
+print(vowels[3])     // Prints: o
+print(vowels[4])     // Prints: u
+
+
+var temperature: [Int] = [66, 68, 72, 76, 80, 82, 85, 85, 84, 82, 81, 78, 74, 73, 72, 71, 70, 69, 68, 65, 63, 62, 61, 63]
+
+// Write your code below 🌴
+print(temperature[0])                //Prints 66
