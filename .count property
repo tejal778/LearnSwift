@@ -1,0 +1,10 @@
+// Use count value to give number of elements inside array
+
+var grocery = ["🥓", "🥞", "🍪", "🥛", "🍊"]
+print(grocery.count)    // prints 5
+
+
+var countingRhyme = ["eeny", "meeny", "miny", "moe", "catch", "a", "coder", "by", "the", "toe", "if", "they", "debug", "let", "them", "go", "eeny", "meeny", "miny", "moe"]
+
+// Write your code below 🐛
+print(countingRhyme.count)        // prints 20
