@@ -1,0 +1,31 @@
+var moon = ["🌖", "🌗", "🌘", "🌑"]
+
+To insert an item in the array at a specified index, we can call the .insert() method.
+
+moon.insert("🌕", at: 0)
+
+// ["🌕", "🌖", "🌗", "🌘", "🌑"]
+
+The .insert() method takes two values:
+
+The value to be inserted.
+The at: and the index of the insertion.
+So the code above inserted "🌕" at index 0.
+
+To remove an item from the array, call the array’s .remove() method:
+
+moon.remove(at: 4)
+
+// ["🌕", "🌖", "🌗", "🌘"]
+
+The .remove() method only takes in one value, at: and the index of removal.
+
+So the code above removed "🌑" at index 4.
+
+
+var dna = ["ATG", "ACG", "GAA", "TAT"]
+
+// Write your code below 🧬
+dna.insert("GTG", at:3)
+dna.remove(at:0)
+print(dna)                         // ["ACG", "GAA", "TAT", "GTG"]
