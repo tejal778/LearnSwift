@@ -1,0 +1,40 @@
+An array is a list of ordered items.
+var evenNumbers = [2, 4, 6, 8, 10]
+
+The first index in an array is 0.
+The .count property that returns the size of an array.
+Some of the methods that come with arrays:
+.append(): adding an item to the end
+.insert(): adding an item to an index
+.remove(): removing an item from an index
+The for-in loop can be used to iterate through an array.
+
+
+https://www.codecademy.com/learn/learn-swift/modules/learn-swift-arrays/cheatsheet 
+
+// Write a Swift program to find the sum of even numbers and the product of odd numbers in an array.
+//For example, suppose we have an array that is [2, 4, 3, 6, 1, 9], then the program should output:
+Sum of even numbers is 12
+Product of odd numbers is 27
+
+//Code
+
+var list = [2, 4, 3, 6, 1, 9]
+var sum = 0
+var num = 0
+// Write your code below 🧮
+for item in list {
+  if item%2 == 0 {
+    sum += item
+  } 
+  if item%2 == 1 {
+    num += item
+  }
+}
+print("Sum of even numbers is \(sum)")
+print("Sum of odd numbers is \(num)")
+
+
+//Output
+Sum of even numbers is 12
+Sum of odd numbers is 13
