@@ -1,0 +1,40 @@
+We can use a for-in loop
+The syntax looks like the following:
+
+//////////////////////
+for item in array {
+  // Loop body
+}
+
+For example:
+//
+var employees = ["Michael", "Dwight", "Jim", "Pam", "Andy"]
+
+We can write a for-in loop like so:
+
+for item in employees {
+  print(item)
+}
+
+// Prints "Michael"
+// Prints "Dwight"
+// Prints "Jim"
+// Prints "Pam"
+// Prints "Andy"
+
+
+//Example
+var receipt = [12.00, 3.75, 6.50, 19.99]
+
+// Write your code below 🧾
+var total: Double = 0.0
+
+for item in receipt {
+ total = total + item
+ 
+}
+total = total*1.08875
+print (total)
+
+//Output
+45.9888
