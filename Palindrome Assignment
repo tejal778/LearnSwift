@@ -1,0 +1,15 @@
+var text = ["n", "i", "t", "o","n"]
+var reversed = [String]()
+
+var counter = text.count - 1
+
+while counter >= 0 {                                      //Create a while loop || Set counter's value in decremental order || append the char in text at index counter to the end of reversed array.
+  reversed.append(text[counter])
+  counter = counter - 1
+}
+
+if text == reversed {
+  print("We have a palindrome!")
+} else {
+  print ("We do not have a palindrome")
+}
