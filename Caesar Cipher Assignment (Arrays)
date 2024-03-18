@@ -1,0 +1,55 @@
+Caesar's Cipher
+The Caesar’s Cipher is one of the simplest and most widely known encryption techniques. It is named after Julius Caesar because it was used by the Roman Empire to encode military secrets.
+
+To use the cipher, draw the alphabet in a circle like so:
+
+Alphabet with letters arranged in a circle
+Take every letter of your message and shift it three places to the right. For example:
+
+The letter a becomes d.
+The letter b becomes e.
+The letter c becomes f.
+The word hello becomes khoor.
+Shift 3 places to turn A to D
+Write a CaesarCipher.swift program that encrypts a message by shifting each letter three places to the right.
+
+
+var alphabet: [Character] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+var secretMessage = "codecademy"
+print(secretMessage)
+
+//To convert any text string characters into different elements in an array, use Array(//Add the declared text string here)
+
+var message = Array(secretMessage)
+print(message)
+
+//Logic - Loop through the message and replace each letter with a letter that is 3 places ahead in the alphabet order. 
+
+for i in 0 ..< message.count {
+for j in 0 ..< alphabet.count {
+if message[i] == alphabet[j] {
+
+message[i] = alphabet[j+3]
+break
+}
+}
+}
+
+print(message)          /////// This will throw an error because if the code checks the secrect character for y in codecademy it goes out of bounds. 
+
+//Correction
+alphabet[(j+3) % 26] 
+% is used to wrap around the alphabet, now doing the above the letter position will never go beyond 26. 
+
+//OUTPUT
+
+codecademy
+["c", "o", "d", "e", "c", "a", "d", "e", "m", "y"]
+["f", "r", "g", "h", "f", "d", "g", "h", "p", "b"]
+
+
+
+
+
+
