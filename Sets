@@ -1,0 +1,39 @@
+A set is an unordered collection of unique elements.
+
+There are many similarities between sets and arrays, but the main differences between the two are:
+
+Set elements cannot be repeated, while that is allowed in arrays.
+A set does not have a defined order, while an array does.
+
+Creating empty set:
+var setName = Set<Type>()
+
+//
+To initialize a set, use the Set keyword followed by the data type of the elements it will contain.
+To signify we are creating an empty set, add parentheses () at the end of the statement.
+\\
+
+Example:
+var instruments = Set<String>()
+
+// To create a populated set:
+var setName: Set = [Value1, Value2, Value3]
+
+// 
+We must use the Set keyword.
+All values must be contained within brackets [] and each value is separated by a comma ,.
+There are no repeated values.
+The elements of the set must all be the same type.
+\\
+
+//If we wanted to create a set that stores members of the Swift team, our code would look like this:
+
+var swiftTeam: Set = ["Galina", "Kenny", "Sonny", "Alex"]
+
+EXAMPLE:
+var consonants = Set<Character>()
+var vowels: Set = ["A", "E", "I", "O", "U"]
+print(vowels)
+
+// Output
+["E", "I", "O", "U", "A"]   // Can be random
