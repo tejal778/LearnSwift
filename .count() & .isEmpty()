@@ -1,0 +1,32 @@
+For example, we can use .count to find out how many elements are contained within a set:
+
+setName.count
+We learned about using .count with arrays. .count returns an Int value that represents the number of values stored inside of a specified set.
+
+
+For example, we can create a set to store the items we found in our lunchbox:
+
+var lunchbox: Set = ["Apple", "Sandwich"]
+
+Then, we could use .count to find out how many items we have in lunchbox:
+
+print("I have \(lunchbox.count) items in my lunchbox!")
+
+// Prints: I have 2 items in my lunchbox!
+
+
+If we want to find out if our set is empty, we can use the .isEmpty property to check if there are values contained within our set.
+
+setName.isEmpty
+If there are no values in the set, the expression will return true.
+If there are values, the expression will return false.
+
+
+EXAMPLE:
+var instruments = Set<String>()
+
+if instruments.isEmpty {
+  print("Let's sign up for piano lessons!")
+}
+// Prints: Let's sign up for piano lessons!
+
