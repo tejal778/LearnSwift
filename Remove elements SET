@@ -1,0 +1,34 @@
+ This method can remove a single item from a set with the following syntax:
+
+// setName.remove(Value)
+
+// Example
+var plantShelf: Set = ["Haworthia", "Graptopetalum", "Echeveria", "Corpuscularia"]
+
+Unfortunately, we overwatered the "Haworthia" plant, and it wilted away.
+
+To remove this value from plantShelf using .remove(), we can use this code:
+
+plantShelf.remove("Haworthia")
+
+// To remove all elements in the set: 
+
+If we wanted to remove every single element from a set, we could use the .removeAll() method:
+
+setName.removeAll()
+Let’s say we are moving our plant collection over to the window sill. Removing all the values from plantShelf looks like this:
+
+plantShelf.removeAll()
+
+Example:
+
+//var planets: Set = ["Earth", "Jupiter", "Mars", "Neptune", "Saturn", "Venus", "Uranus", "Mercury", "Pluto"]
+
+// Write your code below ⭐
+planets.remove("Pluto")
+
+planets.removeAll()
+
+print(planets)
+
+Output - []
