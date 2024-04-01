@@ -1,0 +1,35 @@
+We can use the following syntax to check for an element inside of a set:
+
+setName.contains(Value)
+If the item exists within the set, the expression returns true.
+If the item does not appear in the set, the expression returns false.
+Imagine we are hosting a party. Let’s create a set for all the food we currently have in the house:
+
+var foodAtHome: Set = ["Chips", "Guacamole", "Cookies", "Pizza Bagels"]
+
+We are about to head to the store and want to check if we already have "Salsa" at home or if we need to buy more.
+
+We can use the following if/else statement with foodAtHome.contains("Salsa") as our conditional:
+
+if foodAtHome.contains("Salsa") {
+  print("We don't need any more salsa.")
+} else {
+  print("Let's buy more salsa.")
+}
+
+// Prints: Let's buy more salsa.
+
+
+var coffeeFlavors: Set = ["Caramel", "Mocha", "Pumpkin Spice", "Vanilla", "Blueberry"]
+
+// Write your code below 🍵
+
+if coffeeFlavors.contains("Blueberry") {
+  print ("One blueberry coffee coming right up.")
+}
+else {
+  print ("We do not serve that coffee flavor here.")
+}
+
+//OUTPUT
+One blueberry coffee coming right up.
