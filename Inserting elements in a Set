@@ -1,0 +1,32 @@
+We can use .insert() to add elements to a set using this syntax:
+
+// setName.insert(NewValue)
+
+When appending elements to a set:
+
+// The set we are adding to must already exist.
+// The new value must be the same data type that the set was initialized with.
+// If we try to add an item that already exists, the item will still only appear once in the set.
+
+EXAMPLE :
+
+var plantShelf: Set = ["Haworthia", "Corpuscularia", "Echeveria"]
+plantShelf.insert("Graptopetalum")
+
+//OUTPUT
+["Haworthia", "Graptopetalum", "Echeveria", "Corpuscularia"]
+
+//Example:
+var friends: Set = ["Harry", "Ron"]
+print("There are some things you can't share without ending up liking each other, and defeating a twelve-foot mountain troll is one of them.")
+
+// Add your code below ✨
+friends.insert("Hermione")
+friends.insert("Ron")
+
+
+print("Friends: \(friends)")
+
+//OUTPUT
+There are some things you can't share without ending up liking each other, and defeating a twelve-foot mountain troll is one of them.
+Friends: ["Harry", "Hermione", "Ron"]
