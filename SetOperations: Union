@@ -1,0 +1,40 @@
+Union -- All elements, duplicates will be visible once. 
+
+.union(). This operation creates a set by combining the values of two sets together.
+
+The syntax for creating a set using .union() is:
+
+var NewSet = SetA.union(SetB)
+
+//EXAMPLE
+
+var book1: Set = ["Pig 1", "Pig 2", "Pig 3", "Wolf"]
+
+var book2: Set = ["Little Red Riding Hood", "Grandma", "Wolf"]
+
+We can use .union() to combine all the characters into one set called fairyTales:
+
+var fairyTales = book1.union(book2)
+
+Imagine finding a third book, book3:
+
+var book3: Set = ["Jack", "Blunderbore", "Beanstock"]
+
+With set operations, we can combine multiple sets like this:
+
+var fairyTales = book1.union(book2).union(book3)
+
+//OUTPUT
+["Blunderbore", "Pig 1", "Pig 2", "Little Red Riding Hood", "Pig 3", "Grandma", "Wolf", "Jack", "Beanstock"]
+
+//EXAMPLE
+var consonants: Set = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
+
+var vowels: Set = ["A", "E", "I", "O", "U"]
+
+// Write your code below 🔡
+var alphabet = consonants.union(vowels)
+print(alphabet)
+
+//OUPUT
+["S", "Y", "T", "N", "O", "Q", "V", "G", "C", "F", "Z", "U", "P", "I", "B", "W", "A", "M", "D", "J", "H", "R", "X", "E", "K", "L"]
