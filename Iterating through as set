@@ -1,0 +1,40 @@
+To iterate over every item of a set, we can use this syntax:
+
+for Value in setName {
+  // Body of loop
+}
+
+//EXAMPLE
+Let’s create a set that stores the necessary ingredients for baking chocolate chip cookies:
+
+//CODE
+
+var chocoChipCookies: Set = ["Flour", "Chocolate Chips", "Butter", "Eggs", "Sugar", "Baking Powder"]
+
+for ingredient in chocoChipCookies {                      //We can use a for-in loop that will print() all the ingredients we need
+  print(ingredient)
+}
+
+//OUTPUT
+Flour
+Chocolate Chips
+Eggs
+Baking Powder
+Butter
+Sugar
+
+//EXAMPLE
+var thingsToPack: Set = ["Bathing Suit", "Clothes", "Sunglasses", "Sunscreen", "Favorite Book", "Phone Charger"]
+
+var suitcase = Set<String>()
+
+// Add your code below 🌴
+for item in thingsToPack {
+  
+  suitcase.insert(item)
+}
+
+print(suitcase)
+
+//OUTPUT
+["Sunglasses", "Bathing Suit", "Sunscreen", "Phone Charger", "Favorite Book", "Clothes"]
