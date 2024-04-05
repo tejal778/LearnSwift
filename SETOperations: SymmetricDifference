@@ -1,0 +1,31 @@
+The .symmetricDifference() operation can be used to find elements that exist in one of the given sets, but not both.
+
+The syntax for creating a set using .symmetricDifference() looks like this:
+
+var NewSet = SetA.symmetricDifference(SetB)
+
+//EXAMPLE
+The following sets nintendoSwitch and playStation4 store String values of games that can be played on that specific console:
+
+var nintendoSwitch: Set = ["Animal Crossing", "DOOM Eternal", "Stardew Valley"]
+
+var playStation4: Set = ["DOOM Eternal", "Stardew Valley", "The Last of Us"]
+
+To find which games are exclusive to only one console, we can use .symmetricDifference() to remove any values that appear in both switchConsole and playStation4:
+
+var exclusiveGames = nintendoSwitch.symmetricDifference(playStation4)
+
+//OUTPUT
+["Animal Crossing", "The Last of Us"]
+
+//Example
+var oscarWinners: Set = ["Heath Ledger", "Rita Moreno", "Audrey Hepburn", "John Legend"]
+var emmyWinners: Set = ["Peter Dinklage", "John Legend", "Audrey Hepburn", "Rita Moreno"]
+
+// Add your code below 🏆
+var difference = oscarWinners.symmetricDifference(emmyWinners)
+
+print(difference)
+
+//OUTPUT
+["Peter Dinklage", "Heath Ledger"]
