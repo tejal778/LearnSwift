@@ -1,0 +1,30 @@
+.subtracting(). This method creates a new set of elements by removing the overlapping data of one set from another set.
+
+To use .subtracting() in our program, we can use this code:
+
+var newSet = SetA.subtracting(SetB)
+Any values that SetA shares with SetB will be removed and newSet will contain values found only in SetA but not in SetB.
+
+//EXAMPLE
+Consider the following sets: animals and notEndangered:
+
+var animals: Set = ["Bison", "Mountain Gorilla", "Hedgehog", "Sea Turtle", "Vaquita", "Ocelot"]
+var notEndangered: Set = ["Bison", "Hedgehog", "Ocelot"]
+
+var endangered = animals.subtracting(notEndangered)      //We can use .subtracting() to create a set of animals that are endangered based on the two sets above
+
+//OUTPUT
+["Vaquita", "Mountain Gorilla", "Sea Turtle"]
+
+//EXAMPLE
+var foodEmojis: Set = ["🥕", "🍇", "🌶️", "🍒", "🍎", "🥦"]
+var fruitEmojis: Set = ["🍇", "🍎", "🍒"]
+
+// Add your code below 🥗
+
+var veggieEmojis = foodEmojis.subtracting(fruitEmojis)
+
+print(veggieEmojis)
+
+//OUTPUT
+["🥕", "🥦", "🌶️"]
