@@ -1,0 +1,38 @@
+In Swift, we can use set operations to create new sets based on the data within two different sets! This is useful when we are working with multiple data sets.
+
+We can use the .intersection() method to find matching values in two different sets
+
+//SYNTAX
+
+var newSet = SetA.intersection(SetB)
+
+We append .intersection() to an existing set.
+We place the second set inside the parentheses ().
+We do not need to use the Set keyword when creating a set via set operations.
+
+//EXAMPLE
+Let’s say we had the following two sets that contain the names of continents in the northern and southern hemisphere:
+
+var northHemisphere: Set = ["South America", "Europe", "North America", "Africa", "Asia"]
+var southHemisphere: Set = ["Australia", "Antarctica", "Africa", "South America", "Asia"]
+
+
+
+var bothHemispheres = northHemisphere.intersection(southHemisphere)          //We can use .intersection() to create a set called bothHemispheres that contains continents that exist in both hemispheres
+
+//OUTPUT
+["Asia", "South America", "Africa"]
+
+//EXAMPLE
+var swim: Set = ["Turtles", "Ducks", "Puffins", "Shark"]
+
+var fly: Set = ["Humming birds", "Bats", "Ducks", "Puffins"]
+
+// Add your code below 🦆
+
+var swimAndFly = swim.intersection(fly)
+
+print(swimAndFly)
+
+//OUTPUT
+["Ducks", "Puffins"]
