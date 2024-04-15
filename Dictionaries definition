@@ -1,0 +1,6 @@
+In programming, paired data can be found in a dictionary.
+
+A dictionary is an unordered collection of paired data. The paired data is commonly referred to as a key-value pair in which a key is a unique identifier for their associated value.
+
+In our phones’ contact list, every entry is like a key-value pair. The name of the contact would be considered the key and their associated number would be the value.
+
