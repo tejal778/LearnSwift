@@ -1,0 +1,90 @@
+var spanish101: Set = ["Angela", "Declan", "Aldany", "Alex", "Sonny", "Alif", "Skyla"]
+var german101: Set = ["Angela", "Alex", "Declan", "Kenny", "Cynara", "Adam"]
+var advancedCalculus: Set = ["Cynara", "Gabby", "Angela", "Samantha", "Ana", "Aldany", "Galina", "Jasmine"]
+var artHistory: Set = ["Samantha", "Vanessa", "Aldrian", "Cynara", "Kenny", "Declan", "Skyla"]
+var englishLiterature: Set = ["Gabby", "Jasmine", "Alex", "Alif", "Aldrian", "Adam", "Angela"]
+var computerScience: Set = ["Galina", "Kenny", "Sonny", "Alex", "Skyla"]
+
+// Write your code below 🍎
+var allStudents = spanish101.union(german101)
+
+
+var AllStudents = allStudents.union(advancedCalculus)
+
+
+var aLLStudents = AllStudents.union(artHistory)
+
+
+var totalStudents = aLLStudents.union(englishLiterature)
+
+
+var ALLStudents = totalStudents.union(computerScience)
+print(ALLStudents)
+
+for item in ALLStudents {
+  print(item)
+  
+}
+
+let studentcount = ALLStudents.count
+print(studentcount)
+
+var Language = spanish101.union(german101)
+
+var noLanguage = ALLStudents.subtracting(Language)
+print(noLanguage)
+
+var onlyspanish = spanish101.symmetricDifference(german101)
+print(onlyspanish)
+
+var languageAwardWinners = spanish101.intersection(german101)
+
+languageAwardWinners = languageAwardWinners.intersection(englishLiterature)
+
+print(languageAwardWinners)
+
+////////////////////////////////////
+// CLASS SIZE //
+
+var sevenPlus = 0
+
+var classSet: Set = [spanish101, german101, englishLiterature, computerScience, artHistory, advancedCalculus]
+
+for elements in classSet {
+  if elements.count >= 7 {
+    sevenPlus += 1
+  }
+}
+
+print(sevenPlus)
+
+//////////////////////////////////////////////////
+
+OUTPUT
+
+["Alif", "Angela", "Adam", "Skyla", "Aldrian", "Declan", "Samantha", "Galina", "Vanessa", "Jasmine", "Alex", "Cynara", "Aldany", "Gabby", "Kenny", "Ana", "Sonny"]
+Alif
+Angela
+Adam
+Skyla
+Aldrian
+Declan
+Samantha
+Galina
+Vanessa
+Jasmine
+Alex
+Cynara
+Aldany
+Gabby
+Kenny
+Ana
+Sonny
+17
+["Aldrian", "Vanessa", "Samantha", "Galina", "Jasmine", "Gabby", "Ana"]
+["Skyla", "Alif", "Cynara", "Adam", "Kenny", "Aldany", "Sonny"]
+["Angela", "Alex"]
+4
+
+
+
