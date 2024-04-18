@@ -1,0 +1,36 @@
+A dictionary with no key-value pairs is also known as an empty dictionary.
+
+This option is useful when we want to populate our dictionary at a later time.
+
+SYNTAX :
+
+We can create an empty dictionary using empty dictionary literal syntax like this:
+
+var dictionaryName: [KeyType: ValueType] = [:]
+
+1. We need to declare the data type of the keys and the values.
+2. After the assignment operator =, we use [:] to declare it’s an empty dictionary.
+
+                            OR
+
+var dictionaryName = [KeyType: ValueType]()
+
+1. We declare the key and value type after the assignment operator.
+2. We add parentheses () after declaring the data types.
+
+
+/// EXAMPLE
+Let’s create an empty dictionary called yearlyPopulation that contains Int type keys and Int type values.
+
+Empty dictionary literal syntax:
+
+var yearlyPopulation: [Int: Int] = [:]
+
+Initializer syntax:
+
+var yearlyPopulation = [Int: Int]()
+
+// Example //
+
+var emptyLiteral: [String: Int] = [:]     //DICTIONARY LITERAL SYNTAX
+var emptyInitializer = [String: Bool]()   //Initializer Syntax
