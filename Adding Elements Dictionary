@@ -1,0 +1,33 @@
+SYNTAX:
+
+dictionaryName[NewKey] = NewValue
+
+// It is important to note that when adding new dictionary elements, the new key and value must match the data types of the dictionary it is being added to or else we will get an error
+
+EXAMPLE:
+var donutPrices = [
+  "Strawberry": 2,
+  "Chocolate": 3
+]
+
+Add donutPrices:
+donutPrices["Boston Cream"] = 4
+
+OUTPUT:
+["Strawberry": 2, "Chocolate": 3, "Boston Cream": 4]
+
+EXAMPLE:
+var teaSteepingTemperature = [
+  "Black": 212,
+  "Oolong": 185,
+  "White": 185
+]
+
+// Add your code below 🍵
+teaSteepingTemperature["Green"] = 185
+teaSteepingTemperature["Rooibos"] = 212
+
+print(teaSteepingTemperature)
+
+OUTPUT:
+["White": 185, "Green": 185, "Rooibos": 212, "Black": 212, "Oolong": 185]
