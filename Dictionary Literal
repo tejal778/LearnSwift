@@ -1,0 +1,52 @@
+We can also create dictionaries which are initialised with elements. 
+In a dictionary, an element refers to a single key-value pair.
+
+To create a populated dictionary, we will use dictionary literal syntax.
+
+SYNTAX:
+var dictionaryName: [KeyType: ValueType] = [
+  Key1: Value1,
+  Key2: Value2,
+  Key3: Value3
+]
+
+// There is a type annotation for both the key and the value.
+// Each key is unique.
+// The keys and values must belong to their specified type.
+// The key and the value are separated by a colon :.
+// All of the elements are contained within brackets [].
+// Each key-value pair is separated by a comma ,
+
+EXAMPLE:
+Let’s create a dictionary called fruitStand that stores information about fruit stock
+
+var fruitStand: [String: Int] = [
+  "Apples": 12,
+  "Bananas": 20
+]
+
+// The keys are type String and the values are type Int.
+// There are two key-value pairs in our dictionary.
+// One pair has a key of "Apples" with a value of 12.
+// The other pair has a key of "Bananas" and a value of 20.
+
+OUTPUT:
+Using print() to output value: 
+
+["Bananas": 20, "Apples": 12]
+
+Dictionaries are unordered - when we use print() to output a dictionary, the order of the elements may not appear in the order they were added in.
+
+EXAMPLE:
+var roleModels: [String: String] = [
+  "Mr. Rogers": "Fred McFeely Rogers",
+  "The Crocodile Hunter": "Stephen Robert Irwin",
+  "Bill Nye the Science Guy": "William Sanford Nye"
+]
+
+print(roleModels)
+
+OUTPUT:
+["Bill Nye the Science Guy": "William Sanford Nye", "The Crocodile Hunter": "Stephen Robert Irwin", "Mr. Rogers": "Fred McFeely Rogers"]
+
+// Output changes every time we run the code as dictionary is unordered.
