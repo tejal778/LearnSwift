@@ -1,0 +1,19 @@
+Using type inference, the compiler can automatically determine the data type of a Swift expression. We can use type inference to declare dictionaries with less code.
+
+EXAMPLE:
+var fruitStand = [
+  "Apples": 12,
+  "Bananas": 20
+]
+ // eliminates the need to use the type annotation [String: Int]
+
+EXAMPLE:
+var movieYears = [
+  "Finding Nemo": 2003,
+  "Toy Story": 1995
+]
+
+print(movieYears)
+
+Output:
+["Finding Nemo": 2003, "Toy Story": 1995]         //Changes every time code compiles
