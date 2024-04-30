@@ -1,0 +1,40 @@
+SYNTAX:
+
+dictionaryName[Key] = NewValue
+
+EXAMPLE:
+
+var musicGenre = [
+  "Duke Ellington": "Jazz",
+  "Taylor Swift": "Country",
+  "David Bowie": "Rock"
+]
+
+musicGenre["Taylor Swift"] = "Pop"
+
+///////        OR        ////////
+
+SYNTAX:
+dictionaryName.updateValue(NewValue, forKey: Key)
+
+EXAMPLE:
+musicGenre.updateValue("Pop", forKey: "Taylor Swift")
+
+Example:
+var abbreviations = [
+  "LOL": "Laboring Over Latkes",
+  "LMK": "Let Me Know",
+  "BRB": "Bringing Radishes Back",
+  "GJOYC": "Great Job On Your Code"
+]
+
+// Add your code below 🆘
+abbreviations["LOL"] = "Laugh Out Loud"
+abbreviations.updateValue("Be Right Back", forKey: "BRB")
+
+
+
+print(abbreviations)
+
+OUTPUT:
+["LOL": "Laugh Out Loud", "LMK": "Let Me Know", "BRB": "Be Right Back", "GJOYC": "Great Job On Your Code"]
