@@ -1,0 +1,51 @@
+SYNTAX:
+
+dictionaryName[Key] = nil
+
+EXAMPLE:
+
+var bookShelf = [
+  "Goodnight Moon": "Margaret Wise Brown",
+  "The BFG": "Roald Dahl",
+  "Falling Up": "Shel Silverstein"
+]
+
+bookShelf["The BFG"] = nil
+
+//////      OR      //////
+
+dictionaryName.removeValue(forKey: Key)
+
+Example:
+
+bookShelf.removeValue(forKey: "The BFG")
+
+/// To delete all Key Value pairs at once inside a dictionary:
+
+dictionaryName.removeAll()
+
+EXAMPLE:
+
+bookShelf.removeAll()
+
+EXAMPLE:
+var rainbowHex = [
+  "red": "#ff0000",
+  "pink": "#ffc0cb",
+  "yellow": "#ffff00",
+  "maroon": "#800000",
+  "green":  "#00ff00",
+  "blue": "#0000ff",
+  "violet": "#ee82ee"
+]
+
+// Write your code below 🌈
+rainbowHex["maroon"] = nil
+rainbowHex.removeValue(forKey: "pink")
+rainbowHex.removeAll()
+
+print(rainbowHex)
+
+Output:
+
+[:]
