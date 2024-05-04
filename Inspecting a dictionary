@@ -1,0 +1,28 @@
+2 ways to do it: 
+
+// Check whether the dictionary is empty:
+dictionaryName.isEmpty       /// Returns true OR false
+
+// Check number of items in dictionary: 
+dictionaryName.count         /// Returns count of items within dictionary
+
+EXAMPLE:
+
+var numberOfSides = [
+  "triangle": 3,
+  "square": 4,
+  "rectangle": 4,
+  "decagon": 10,
+  "triacontagon": 30
+]
+
+// Add your code below 🔺
+if numberOfSides.isEmpty {
+  print("This dictionary has no elements in it.")
+}
+else {
+  print(numberOfSides.count)
+}
+
+OUTPUT:
+5
