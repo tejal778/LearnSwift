@@ -1,0 +1,42 @@
+We can use the properties .keys and .values to create collections of the keys and values of a dictionary that we can then loop through.
+
+The .keys property stores a collection of dictionary keys, while the .values property stores a collection of dictionary values.
+
+EXAMPLE:
+
+var fruitStand = [
+  "Apples": 12,
+  "Bananas": 20,
+  "Oranges": 18
+]
+print(fruitStand.keys)
+
+OUTPUT:
+
+["Bananas", "Oranges", "Apples"]
+
+If we printed fruitStand.values, our output would include these values: [20, 18, 12]  
+
+EXAMPLE: 
+
+var lemonadeStand = [
+  "April": 8.50,
+  "May": 12.75,
+  "June": 22.50,
+  "July": 38.25, 
+  "August": 32.50,
+  "September": 11.50
+]
+
+var total: Double = 0.0
+
+// Add your code below 🍋
+for monthlyProfit in lemonadeStand.values {
+total = total + monthlyProfit
+}
+
+print("Total profits are \(total)")
+
+OUTPUT: 
+
+Total profits are 126.0  
