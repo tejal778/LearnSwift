@@ -1,0 +1,49 @@
+If we wanted to loop through every key and value in a dictionary using a for-in loop, the syntax would look as follows:
+
+for (keyHolder, valueHolder) in dictionaryName {
+  // Body of loop
+}
+
+// Since dictionaries have both keys and values, we group them together in parentheses () and separate them by a comma.
+
+Having two or more values wrapped in parentheses () and separated by commas , is called a tuple.
+
+EXAMPLE:
+
+Let’s create a dictionary that stores the names and grades of individual students in a class. If we want to view each student’s name and their grade:
+
+var classGrades = [
+  "Raymond": 100,
+  "Rosa": 82,
+  "Jake": 73,
+  "Terry": 90
+]
+
+for (name, grade) in classGrades {
+  print("\(name) has a grade of \(grade)")
+}
+
+OUTPUT:
+Rosa has a grade of 82
+Raymond has a grade of 100
+Jake has a grade of 73
+Terry has a grade of 90
+
+EXAMPLE:
+
+var mythology = [
+  "Zeus": "Jupiter",
+  "Athena": "Minerva", 
+  "Poseidon": "Neptune",
+  "Demeter": "Ceres"]
+
+// Write your code below 🏛️ 
+for (greekName, romanName) in mythology {
+  print ("\(greekName) is also known as \(romanName)")
+}
+
+OUTPUT:
+Poseidon is also known as Neptune
+Demeter is also known as Ceres
+Athena is also known as Minerva
+Zeus is also known as Jupiter
