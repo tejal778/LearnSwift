@@ -1,0 +1,125 @@
+An if-let statement is a Swift conditional that is used to unwrap optional values which can then be assigned to variables. 
+While if-let statements have many uses, our main focus will be how to use them to unwrap optionals in a dictionary.
+
+
+Unwrapping Optionals:
+
+First, let’s discuss optional values. In Swift, an optional is a data type that could contain either a value or nil, which means absent of value.
+
+Imagine we had a dictionary that stored the common name of animals as its keys and their scientific name as its values:
+
+var animalNames = [
+  "Zebra": "Equus quagga",
+  "Giraffe": "Giraffa camelopardalis",
+  "Elephant": "Proboscidea elephantide"
+]
+
+If we wanted to assign the value of the key "Giraffe" to a variable called giraffeSci, we could use the following code:
+
+var giraffeSci = animalNames["Giraffe"]
+
+However, when we print() the value of giraffeSci, we get an optional value:
+
+Optional("Giraffa camelopardalis")
+
+Being a type-safe language, Swift returns an optional value as a precaution in case the dictionary doesn’t contain the key we are looking for. 
+By always returning an optional value, we avoid running into errors that occur when we assign a nil optional to a variable.
+
+--->>> Type Safety and Type Inferencein page link
+       Swift is a type-safe language. A type safe language encourages you to be clear about the types of values your code can work with. If part of your code requires a String, you can’t pass it an Int by mistake.
+
+       Because Swift is type safe, it performs type checks when compiling your code and flags any mismatched types as errors. This enables you to catch and fix errors as early as possible in the development process.
+
+
+While some optionals contain nil values, other optionals hold values that we can use in our Swift programs. 
+In order for us to check and extract the value held by an optional, we can use a strategy known as optional binding.
+
+Optional binding is used to unwrap optionals so we can access their values. 
+There are different methods of optional binding, like forcibly unwrapping or implicitly unwrapping, but the one we are going to focus on in this article is conditional unwrapping due to it’s safe execution.
+
+
+Conditional unwrapping uses conditional statements to check if an optional contains a value before assigning the value to a variable. To implement conditional unwrapping in a Swift program, we use if-let statements.
+
+Using if-let Statements in Swift::
+An if-let statement is a conditional statement that checks if the value inside an optional really exists and if it does, it assigns that value to a variable.
+
+The set up for an if-let statement is as follows:
+
+if let newVariable = dictionaryName[optionalValue] {
+  // This code will run if the optional contains a real value
+}
+
+EXAMPLE::
+
+Let’s revisit our animalNames dictionary and see how we can use an if-let statement to extract the value from the key-value pair "Giraffe": "Giraffa camelopardalis".
+
+If we want to extract the value of the optional animalNames["Giraffe"], we can unwrap it using an if-let statement like so:
+
+if let giraffeSci = animalNames["Giraffe"] {
+  print("A giraffe is also known as a \(giraffeSci).")
+} else {
+  print("There is no value.")
+}
+
+When we run this code, we get this result:
+
+A giraffe is also known as a Giraffa camelopardalis.
+
+However, if we tried to use an if-let statement to assign the value of the non-existent key "Unicorn" to a variable called unicornSci, we would get the following result:
+
+if let unicornSci = animalNames["Unicorn"] {
+  print("A unicorn is also known as a \(unicornSci).")
+} else {
+  print("There is no value.")
+}
+
+// Prints: There is no value.
+
+The key "Unicorn" does not exist, so the value was nil. Since the value did not exist, the code in the else statement was executed and "There is no value." was outputted to the terminal.
+
+
+
+
+///////      Scope and if-let Statements      ///////////////
+
+One final thing to note about the if-let statement is its scope. Scope is a concept that dictates the environment in which values (and functions) can be accessed in a program.
+
+In an if-let statement, the variable we created can only be accessed within the body of the if-let statement. Values that can only be accessed within a code block are also referred to as code block scope.
+
+For example, let’s try to refer to giraffeSci outside of the if-let statement:
+
+if let giraffeSci = animalNames["Giraffe"] {
+  print("A giraffe is also known as a \(giraffeSci).")
+} else {
+  print("There is no value.")
+}
+
+print("\(giraffeSci) are herbivores.")
+
+If we ran this code, we would get the following error:
+
+error: use of unresolved identifier 'giraffeSci'
+print("\(giraffeSci) are herbivores.")
+The compiler is stating that giraffeSci is not an initialized variable because it is being referenced outside of its scope. When working with if-let statements, make sure to only access its variables within its scope.
+
+Scope is a fundamental concept that is present in many aspects of programming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
