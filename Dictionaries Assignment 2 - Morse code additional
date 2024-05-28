@@ -1,0 +1,116 @@
+Problem Statement: 
+
+Add punctuation marks like ., ?, ,, and ! to your dictionary in previous part of assignment.
+Modify your code to make all the characters in a message lower case before being translated into Morse code.
+Modify your code to make the first letter of each sentence capitalized when translating from Morse code to text.
+
+CODE:
+
+import Foundation
+
+var englishText = "This is a secret message! Can you decode it?"
+
+var secretMessage = ".... --- .-- -.. -.--   .--. .- .-. - -. . .-.   -.-. .- -.   -.-- --- ..-   -.. . -.-. --- -.. .   .. - ..--.."
+
+var letterToMorse: [String: String] = [
+  "a": ".-", "b": "-...", "c": "-.-.", "d": "-..", "e": ".",
+  "f": "..-.", "g": "--.", "h": "....", "i": "..", "j": ".---",
+  "k": "-.-", "l": ".-..", "m": "--", "n": "-.", "o": "---",
+  "p": ".--.", "q": "--.-", "r": ".-.", "s": "...", "t": "-",
+  "u": "..-", "v": "...-", "w": ".--", "x": "-..-", "y": "-.--",
+  "z": "--..", "0": "-----", "1": ".----", "2": "..---", "3": "...--",
+  "4": "....-", "5": ".....", "6": "-....", "7": "--...", "8": "---..",
+  "9": "----.", ".": ".-.-.-", ",": "--..--", "?": "..--..", "!": "-.-.--",
+  " ": " "
+]
+
+// Convert to lower case before translation
+englishText = englishText.lowercased()
+
+var morseText = ""
+
+for element in englishText {
+   if let morseChar = letterToMorse["\(element)"] {
+       morseText += morseChar + " "
+   } else {
+       morseText += "   "
+   }
+}
+
+print("Morse Code: \(morseText)")
+
+var decodedMessage = ""
+var morseCodeArray: [String] = []
+
+var currMorse = ""
+
+for char in secretMessage {
+  if char != " " {
+    currMorse.append(char)
+  } else {
+    if currMorse == "" {
+      morseCodeArray.append(" ")
+    } else {
+      morseCodeArray.append(currMorse)
+      currMorse = ""
+    }
+  }
+}
+if currMorse != "" {
+  morseCodeArray.append(currMorse)
+}
+print("Morse Code Array: \(morseCodeArray)")
+
+var morseToLetter: [String: String] = [:]
+
+for (letter, morseChar) in letterToMorse {
+  morseToLetter[morseChar] = letter
+}
+
+print("Morse to Letter Dictionary: \(morseToLetter)")
+
+var capitalizeNext = true
+
+// Go through each element in morseCodeArray and find the text value via the morseToLetter dictionary
+for morseValue in morseCodeArray {
+  if morseValue == " " {
+    decodedMessage += " "
+    capitalizeNext = true
+  } else if let letterChar = morseToLetter[morseValue] {
+    if capitalizeNext {
+      decodedMessage += letterChar.capitalized
+      capitalizeNext = false
+    } else {
+      decodedMessage += letterChar
+    }
+    if letterChar == "." || letterChar == "!" || letterChar == "?" {
+      capitalizeNext = true
+    }
+  }
+}
+
+print("Decoded Message: \(decodedMessage)")
+
+OUTPUT:
+
+Morse Code: - .... .. ...   .. ...   .-   ... . -.-. .-. . -   -- . ... ... .- --. . -.-.--   -.-. .- -.   -.-- --- ..-   -.. . -.-. --- -.. .   .. - ..--.. 
+Morse Code Array: ["....", "---", ".--", "-..", "-.--", " ", " ", ".--.", ".-", ".-.", "-", "-.", ".", ".-.", " ", " ", "-.-.", ".-", "-.", " ", " ", "-.--", "---", "..-", " ", " ", "-..", ".", "-.-.", "---", "-..", ".", " ", " ", "..", "-", "..--.."]
+Morse to Letter Dictionary: ["..": "i", "--.": "g", "-.-": "k", "-..": "d", ".-": "a", "---..": "8", " ": " ", "-----": "0", "--..": "z", "-...": "b", "-.-.--": "!", "--.-": "q", "....-": "4", ".....": "5", "-..-": "x", ".-.": "r", "-": "t", "--..--": ",", "...-": "v", "..-.": "f", "...": "s", "-.-.": "c", "....": "h", "..--..": "?", ".--": "w", "-....": "6", ".-..": "l", ".-.-.-": ".", "..-": "u", "--": "m", "...--": "3", ".----": "1", ".": "e", ".--.": "p", "-.--": "y", "--...": "7", "---": "o", "----.": "9", "-.": "n", ".---": "j", "..---": "2"]
+Decoded Message: Howdy  Partner  Can  You  Decode  It?
+
+//
+
+
+//Explanation of Additions and Modifications:
+Added Punctuation Marks:
+
+Extended the letterToMorse dictionary to include . (dot), , (comma), ? (question mark), and ! (exclamation mark).
+Lowercase Conversion:
+
+Used lowercased() method on englishText to ensure all characters are in lowercase before translation.
+Capitalization of Sentences:
+
+Introduced a capitalizeNext boolean flag to track when to capitalize the next letter.
+Set capitalizeNext to true when encountering a space or punctuation that ends a sentence (. ! ?).
+Capitalized the first letter of each sentence during decoding by checking the capitalizeNext flag.
+Now the code should handle punctuation marks, ensure lowercase conversion before translation to Morse code, and capitalize the first letter of each sentence when translating back to English.
