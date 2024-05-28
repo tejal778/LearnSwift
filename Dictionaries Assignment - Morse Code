@@ -1,0 +1,88 @@
+var englishText = "this is a secret message"
+
+var secretMessage = ".... --- .-- -.. -.--   .--. .- .-. - -. . .-."
+
+// Add your code below 🤫
+
+var letterToMorse: [String: String] = [
+  "a": ".-", "b": "-...", "c": "-.-.", "d": "-..", "e": ".",
+  "f": "..-.", "g": "--.", "h": "....", "i": "..", "j": ".---",
+  "k": "-.-", "l": ".-..", "m": "--", "n": "-.", "o": "---",
+  "p": ".--.", "q": "--.-", "r": ".-.", "s": "...", "t": "-",
+  "u": "..-", "v": "...-", "w": ".--", "x": "-..-", "y": "-.--",
+  "z": "--..", " ": " "
+]
+
+var morseText = ""
+
+for element in englishText {
+   if let morseChar = letterToMorse["\(element)"] {
+       morseText += morseChar + " "
+   } else {
+       morseText += "   "
+   }
+}
+
+print(morseText)
+
+var decodedMessage = ""
+var morseCodeArray: [String] = []
+
+var currMorse = ""
+
+for char in secretMessage {
+  if char != " " {
+    currMorse.append(char)
+  } else {
+    if currMorse == "" {
+      morseCodeArray.append(" ")
+    } else {
+      morseCodeArray.append(currMorse)
+      currMorse = ""
+    }
+  }
+}
+if currMorse != "" {
+  morseCodeArray.append(currMorse)
+}
+print(morseCodeArray)
+
+var morseToLetter: [String: String] = [:]
+
+for (letter, morseChar) in letterToMorse {
+  morseToLetter[morseChar] = letter
+}
+
+print(morseToLetter)
+
+// Go through each element in morseCodeArray and find the text value via the morseToLetter dictionary
+for morseValue in morseCodeArray {
+  if morseValue == " " {
+    decodedMessage += " "
+  } else if let letterChar = morseToLetter[morseValue] {
+    decodedMessage += letterChar
+  }
+}
+
+print(decodedMessage)
+
+OUTPUT:
+
+- .... .. ...   .. ...   .-   ... . -.-. .-. . -   -- . ... ... .- --. . 
+["....", "---", ".--", "-..", "-.--", " ", " ", ".--.", ".-", ".-.", "-", "-.", ".", ".-."]
+["...-": "v", "---": "o", "...": "s", ".": "e", "-.": "n", ".-..": "l", ".--": "w", "-.-.": "c", "-.-": "k", ".---": "j", "-...": "b", "-..": "d", "....": "h", "--..": "z", ".-.": "r", "-": "t", "--.": "g", "..-.": "f", "-.--": "y", ".-": "a", "..-": "u", "-..-": "x", "..": "i", ".--.": "p", "--.-": "q", " ": " ", "--": "m"]
+howdy  partner
+
+
+//Explanation of Corrections:
+Translation from English to Morse Code:
+
+Added a space between each Morse code letter.
+Handled spaces in the English text correctly by adding three spaces in the Morse code output.
+Decoding Morse Code Message:
+
+Corrected the morseCodeArray handling to properly differentiate between letters and spaces.
+Added logic to handle cases where the Morse code letters are separated by a single space and words are separated by three spaces.
+Reversed the letterToMorse dictionary to create morseToLetter for decoding.
+Checked for spaces explicitly and handled appending decoded letters correctly.
+Now, the code should correctly translate English text to Morse code and decode a given Morse code message back to English text.
