@@ -1,0 +1,41 @@
+Parameters are defined in a function as follows:
+
+func someFunction(paramName: paramType) -> returnType {
+   // function body where paramName can be used
+}
+
+In above -> We define a parameter with its name and type, separated by a ":"
+
+EXAMPLE:
+
+Assume we have a garden in the shape of a square whose area we need to calculate. We can set up the following function:
+
+func findGardenArea(side: Int) -> Int {
+  return side * side
+} 
+
+The function above, findGardenArea(side:), accepts a single parameter, side, of the type, Int, and returns a value of the Int type. Within the function, the result of multiplying side by side is returned.
+
+When calling this function, we will need to pass in an argument for side. An argument is the real value for a parameter when the function is called.
+
+var area = findGardenArea(side: 5) 
+print(area) // Prints: 25
+
+On the first line above, we pass in the argument, 5 for the side parameter in the function call. 
+With this, the compiler knows to replace side with 5 in the function body and return the result of 5 * 5. 
+This product is then stored in the variable area and printed to the terminal.
+
+RULES: 
+If a parameter exists, an argument must be passed in when the function is called. Otherwise, the compiler will throw an error.
+The argument must be the same type of value that the parameter is declared to have.
+When referencing a function, include the parameter name(s) in its title followed by a colon such as findGardenArea(side:).
+
+EXAMPLE:
+
+func findCircumference(diameter: Double) -> Double {
+  return 3.14*diameter
+}
+var result = findCircumference(diameter: 3.14)
+print(result)
+
+Output -> 9.8596
