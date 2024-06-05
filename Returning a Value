@@ -1,0 +1,52 @@
+Passing a value from a function allows us to use it in other functions or save it in a variable until the need for it arises.
+
+If we intend for a function to return a value, we must specify that value’s return type in the function definition. Take a look at the following code:
+
+func funcName() -> Int {
+ return 5
+}
+
+Function above returns value of type Int
+Body consists of "5" which returns the same valueType
+
+Note: Not specifying a return type or omitting a return statement in a function that expects a return will result in an error.
+
+EXAMPLE:
+
+Following program determines a user’s age given their birth year and the current year ::
+
+let birthYear = 1994
+var currentYear = 2021
+
+func findAge() -> Int {
+  return currentYear - birthYear
+}
+
+The findAge() function returns a value of the type, Int.
+Within the body of findAge(), a return statement is used to return the difference between the currentYear and birthYear from the function.
+The return statement ends the execution of a function.
+
+OUTPUT Compilation of above ::
+
+1. Wrap the function call directly in a print() statement:
+print(findAge()) // Prints: 27
+
+2. Save the function call in a variable and then use a print() statement to output the value of the variable:
+var age = findAge()
+
+print(age) // Prints: 27
+
+EXAMPLE:
+
+let weight = 70.0 // in Kilograms
+let height = 1.73 // in Meters
+
+// Write your code below 💪
+func findBMI() -> Double {
+  return weight/(height*height)
+}
+
+print (findBMI())
+
+OUTPUT:
+23.38868655818771
