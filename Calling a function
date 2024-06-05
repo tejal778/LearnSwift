@@ -1,0 +1,33 @@
+The process of executing the code inside the body of a function is known as calling it. 
+To call a function in Swift, type out its name followed by parentheses ().
+
+EXAMPLE:
+
+func makeSushiRoll() {
+ print("First, spread rice on Nori")
+ print("Next, add fillings")
+ print("Carefully roll the sushi")
+ print("Cut the sushi")
+ print("Serve 🍣") 
+} 
+
+Explanation:
+
+To call our function, we must type out the function’s name followed by a pair of parenthesis: makeSushiRoll()
+
+Calling the function will execute the print() statements within the body and result in the following output:
+First, spread rice on Nori
+Next, add fillings
+Carefully roll the sushi
+Cut the sushi
+Serve 🍣
+
+EXAMPLE:
+
+func mySpecialRecipe() -> Void {
+  print("Boil, mix flavour, stir, serve")
+}
+
+mySpecialRecipe()
+
+Output -> Boil, mix flavour, stir, serve
