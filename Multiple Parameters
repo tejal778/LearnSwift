@@ -1,0 +1,41 @@
+That determines if a race car driver can proceed to the next round of qualifications given their current performamnce. 
+Since this depends on 2 different types of data, the driver's speed and state of the car, we can set up multiple parameters in a function:
+
+Code:
+
+func didQualify(slowestDriver: Bool, retired: Bool) -> String {
+
+  if slowestDriver || retired {
+    return "Eliminated"
+  } else {
+    return "Qualified"
+  }
+}
+
+Observations:
+1. slowestDriver and retired are parameters of type Bool within the function, didQualify(slowestDriver:retired:) that returns a String Value.
+2. The parameters are used in an if/else statement to determine whether or not the driver continues onto the next round.
+
+The if statement executes within the function with the boolean values, and the function returns "Eliminated".
+
+Problem Statement:
+Set up a function timeToDestination(), that will use an airplane's speed
+
+timeToDestination() should accept distance and speed parameters of type Int()
+timeToDestination()
+
+EXAMPLE:
+
+func timeToDestination(distance: Int, speed: Int) -> Int{
+    let time = distance/speed
+    return time
+}
+
+print(timeToDestination(distance: 6836, speed: 560))
+
+print("Time to reach New York will be \(timeToDestination(distance: 6836, speed: 560)) hours")
+
+Output:
+
+12
+Time to reach New York will be 12 hours
